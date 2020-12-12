@@ -1,8 +1,6 @@
 const names = [];
 const password = [];
 const productData =[];
-const container = document.getElementById('container');
-
 //Add product
 let addProductBtn = document.getElementById('saveProduct');
 addProductBtn.addEventListener('click', () => {
@@ -10,19 +8,36 @@ addProductBtn.addEventListener('click', () => {
   	console.log('adding product data is =='+dataName)
   	addProduct(dataName);
 });
-
 //Add product functionality
 let addProduct =(pName)=>{
 	let index = productData.indexOf(pName);
 	if (index > -1) {
-	  alert('This product is already in our syatem');
+	  alert('This product is already in our system');
 	  return;
 	}
 	if(productData.length >= 5){
 	  alert('you can only add 5 itam in the list');
 	  return;
 	}
-	productData.push(pName);
+	if(pName != ''){
+	  productData.push(pName);	
+	}
 	console.log('procust name list ====',productData);
-	document.getElementById('showProductList').innerHTML=pName;
+	// let data = productData.map();
+	let html = '';
+	productData.map(value =(key,val) =>{
+
+		html+='<div><lable class="margin">';
+		html+=key
+		html+='</lable>';
+		html+='<span class="margin" id="editProduct">';
+		html+='<i class="fa fa-pencil cursor" aria-hidden="true"></i>';
+		html+='</span>';
+		html+='<span class="margin" id="deleteProduct">';
+		html+='<i class="fa fa-trash cursor" aria-hidden="true"></i>';
+		html+='</span>';
+		html+='</div>';
+
+	})
+	document.getElementById('showProductList').innerHTML=html;
 }

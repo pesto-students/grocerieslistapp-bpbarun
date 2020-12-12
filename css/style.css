@@ -34,7 +34,10 @@ p {
 }
 
 span {
-    font-size: 12px;
+    font-size: 15px;
+}
+lable {
+    font-size: 20px;
 }
 
 a {
@@ -224,5 +227,11 @@ input {
     margin: 0 5px;
     height: 40px;
     width: 40px;
+}
+.margin {
+    margin: auto 8px;
+}
+.cursor{
+   cursor: pointer;
 }
 </style>
