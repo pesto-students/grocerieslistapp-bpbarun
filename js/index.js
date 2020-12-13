@@ -3,9 +3,7 @@ const password = [];
 const productData =[];
 const signUpButton = document.getElementById('signUp');
 const signInButton = document.getElementById('signIn');
-
 const container = document.getElementById('container');
-
 signUpButton.addEventListener('click', () => {
     container.classList.add("right-panel-active");
 });
@@ -36,10 +34,8 @@ let signIn=(userName,password) =>{
 	let searchUserName = uresNameData.indexOf(userName);
 	let searchPassword = passwordData.indexOf(password);
 	if((searchUserName > -1) && (searchPassword >-1)) {
-		console.log('redirect to login page')
-		window.location = 'home.html';
-		// window.location.href = "http://www.w3schools.com";
-
+		console.log('redirect to home page')
+		window.location.replace('home.html');
 	}else{
 		alert('Failed to login')
 	}
