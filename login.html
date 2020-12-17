@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Grocery List</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<h2>Sign in/up Form</h2>
+    <div class="container" id="container">
+        <div class="form-container sign-up-container">
+            <form action="#">
+                <span>Create a new account</span>
+                <input type="text" id="signUpUser" placeholder="User name" autocomplete="off" />
+                <input type="password" id="signUpPassword" placeholder="Password" id="password" autocomplete="off" />
+                <input type="password" id="signUpConfPassword" placeholder="Confirm Password" id="cnfPassword" autocomplete="off" />
+                <button id="signUpBtn">Sign Up</button>
+            </form>
+        </div>
+        <div class="form-container sign-in-container">
+            <div class="form-design">
+                <h1>Sign in</h1>
+                <input type="text" id="userName" placeholder="User" />
+                <input type="password" id="password" placeholder="Password" />
+                <button id="loginBtn">Sign In</button>
+            </div>
+        </div>
+        <div class="overlay-container">
+            <div class="overlay">
+                <div class="overlay-panel overlay-left">
+                    <h1>Welcome Back!</h1>
+                    <p>To connected with us please click on Sign In</p>
+                    <button class="ghost" id="signIn">Sign In</button>
+                </div>
+                <div class="overlay-panel overlay-right">
+                    <h1>New User!</h1>
+                    <p>Click on sign up button to create a new account</p>
+                    <button class="ghost" id="signUp">Sign Up</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <script src="js/index.js"></script>
+    </footer>
+</body>
+</html>   
+
+
+    
