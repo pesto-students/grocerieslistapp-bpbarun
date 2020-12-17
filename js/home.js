@@ -8,18 +8,20 @@ addProductBtn.addEventListener('click', () => {
 });
 //Add product functionality
 let addProduct =(pName) => {
+	console.log(localStorage.getItem('upateValue'));
 	let index = productData.indexOf(pName);
 	if (index > -1) {
 	  alert('This product is already in our system');
 	  return;
 	}
+	if(localStorage.getItem('upateValue') !='undefined'){
+	  productData = productData.filter(item => item !== localStorage.getItem('upateValue'));
+	}
 	if(productData.length >= 5){
 	  alert('you can only add 5 itam in the list');
 	  return;
 	}
-	if(localStorage.getItem('upateValue') !='undefined'){
-	  productData = productData.filter(item => item !== localStorage.getItem('upateValue'));
-	}
+	
 	if(pName != ''){
 	  productData.push(pName);	
 	}
